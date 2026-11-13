@@ -1,11 +1,12 @@
 # HydroORBIT
 
+This repository is a fork of [vinhngoctran/HydroORBIT](https://github.com/vinhngoctran/HydroORBIT). See the upstream repository for the original model, authorship, and release information.
+
 **HydroORBIT** is a resolution-agnostic hydrological foundation model for streamflow and related
 hydrological variable forecasting, described in *"An Adaptable Foundation Model for Operational River
 Forecasting."*
 
-The included `weights/` are exported from the final training checkpoint via the model's
-HuggingFace-style `save_pretrained()`. The pretrained model can be downloaded here: https://huggingface.co/vinhtn/HydroORBIT.
+Pretrained weights are available from the [upstream Hugging Face model page](https://huggingface.co/vinhtn/HydroORBIT). They are not bundled in this fork. Download the model files into a local `weights/` directory before running the inference example.
 
 ## Design
 
@@ -37,8 +38,7 @@ HydroORBIT/
 ├── README.md
 ├── requirements.txt
 ├── train.py
-├── train_ddp.py
-├── weights/
+├── weights/                 # Local download; not tracked in this fork
 │   ├── config.json
 │   └── model.safetensors
 ├── src/
@@ -83,4 +83,5 @@ out.quantile_preds  # (B, n_q, H)
 
 See `Example/` for five runnable notebooks, one per experiment type, each with a small sample
 dataset included.
+
 
